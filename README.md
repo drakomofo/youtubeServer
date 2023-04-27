@@ -7,7 +7,7 @@ this is the guide to installing a youtube like server on your computer
 you can stream to with obs. also a simple php chat and webcounter is included.
 I am not a programr so all the code was copied from open source projects, all 
 i did was put it all together for the people to fight back against internet 
-censorship.  i also compiled my rapberry pi RTMP server image. it's 8GB but 
+censorship.  i also compiled my rapberry pi RTMP server image. it's 3.5GB but 
 its ready to go with no setup. my image is for the rapberry pi 3 model. wont work 
 on pi 4.  thets get after it!
 
