@@ -84,7 +84,9 @@ Don't forget to download the app so your ip address syncs with your new website 
 
 Enjoy your new personalized free speech platform!
 If you liked this tutorial, please feel free to click on the buy me a coffee link on your new website and donate before you delete it
-(or keep it on your site to help me out). I am a very poor person. thank you! and enjoy.
+(or keep it on your site to help me out). 
+or
+Bitcoin: bc1qyddp53asfrg2adsm96fjwxc2k347czgrqqst0j 
 
 
 If this did not work for you, please let me know in my chat on http://thepeepshow.ddns.net and I might be able to help.
