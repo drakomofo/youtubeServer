@@ -41,14 +41,13 @@ function loginForm(){
     </head>
     <body>
 
-	<table style="width:100%">
+<table style="width:100%">
 	<tr><td>
 
-
 <h1>YOU FOUND MY WEBPAGE!<BR>
-BOOKMARK IT AND DOWNLOAD IT TO HAVE YOUR OWN<BR>
-YOUTUBE SERVER THAT CAN NOT BE TAKEN DOWN!
-</h1><br>
+BOOKMARK IT AND DOWNLOAD IT!<br>
+HAVE YOUR OWN YOUTUBE SERVER THAT CAN NOT BE TAKEN DOWN!
+</h1>
 <!-- CSS  -->
  <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
 
@@ -69,6 +68,8 @@ YOUTUBE SERVER THAT CAN NOT BE TAKEN DOWN!
 var player = videojs('hls-example');
 player.play();
 </script>
+
+<h1><a href="http://thepeepshow.ddns.net:8282/pastbroadcasts/2a-caption-gallery.php">Click for: Past Broadcasts</a></h1>
 
          </td>
          <td>
@@ -147,22 +148,28 @@ player.play();
 
 
 
-<html>
-<body>
-<br>
-<h1><a href="php-video-gallery/gallery/2a-caption-gallery.php">Click for: Past Broadcasts</a></h1>
-<br>
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="thepeepshow" data-color="#FFDD00" data-emoji="" data-font="Arial" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
-<H1 color="#ff5500">$5 coffee i play anything @ any time!</h1>
-<br>
-<h2><u>Download a Clone of this Webpage!<br>
-and RTMP/HLS Server!<br>
-Fully Independant from Censorship!</u></h2>
-<a href="My_Youtube_Server.zip">"My_Youtube_Server.zip" including "read_me_first.txt" for intall instructions.</a>
-<br><br>
-<a href="Rtmp_pi3_server_image.zip">"Rtmp_pi3_server_image.zip": RTMP/HLS Server rasperry PI 3 image(optional but simple)</a>
-<br><br>
-<a href="Rtmp_pi3_server_image.zip.torrent">Torrent File: "Rtmp_pi3_server_image.zip"</a>
+	</td></tr>
+	<tr><td>
 
+<p>Bitcoin: <br>bc1qyddp53asfrg2adsm96fjwxc2k347czgrqqst0j</p>
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="thepeepshow" data-color="#FFDD00" data-emoji="" data-font="Arial" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+<H1 color="#ff5500">Donate a Coffee and I will play anything @ any time!</h1>
+
+
+<h4><u>Download a Clone of this Webpage!<br>
+and RTMP/HLS Server!<br>
+Fully Independant from Censorship!</u></h4>
+
+
+<a href="My_Youtube_Server.zip">"My_Youtube_Server.zip" including "read_me_first.txt" for intall instructions.</a>
+<h3><u>RTMP/HLS Server rasperry PI 3 image, split in 2 zip files(optional but simple):</u></h3>
+<a href="https://github.com/drakomofo/youtubeServer/releases/download/My_youtube_server/Rtmp_pi3_server_image.zip">"Rtmp_pi3_server_image.zip": part 1</a><br>
+<a href="https://github.com/drakomofo/youtubeServer/releases/download/My_youtube_server/Rtmp_pi3_server_image.z01">"Rtmp_pi3_server_image.z01": part 2</a>
+<h3><u>Mirrors:</u></h3>
+<a href="https://github.com/drakomofo/youtubeServer">https://github.com/drakomofo/youtubeServer</a><br>
+<a href="https://web.archive.org/web/20230427015638/http://thepeepshow.ddns.net/">also on wayback machine</a>
+
+	</td></tr>
+        </table>
 </body>
 </html>
