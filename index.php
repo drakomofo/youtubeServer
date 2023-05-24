@@ -91,7 +91,7 @@ a:active {
 
 <h1>YOU FOUND MY WEBPAGE!<BR>
 BOOKMARK IT AND DOWNLOAD IT!<br>
-<a href="share/index.php">HAVE YOUR OWN YOUTUBE SERVER THAT CAN NOT BE TAKEN DOWN!</a>
+<a href="http://thepeepshow.ddns.net/share/index.php">HAVE YOUR OWN YOUTUBE SERVER THAT CAN NOT BE TAKEN DOWN!</a>
 </h1>
 
 
