@@ -36,40 +36,113 @@ function loginForm(){
         <meta charset="utf-8" />
         <title>ThePeepShow.DDNS.net</title>
         <meta name="description" content="ThePeepShow.DDNS.net" />
-        <link rel="stylesheet" href="style.css" />
+
+        <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/tick.css">
+	<link rel='stylesheet' href='css/video-js.min.css'>
+
+    <!-- Style to create button -->
+    <style>
+        .GFG {
+            background-color: #c1272d;
+            border: 2px solid black;
+            color: white;
+            padding: 10px 20px;
+            text-align: center;
+            display: inline-block;
+            font-size: 20px;
+            margin: 10px 30px;
+            cursor: pointer;
+        }
+    </style>
     </head>
     <body>
+<style>
+a:link {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:visited {
+  color: blue;
+  background-color: transparent;
+  text-decoration: none;
+}
+
+a:hover {
+  color: blue;
+  background-color: transparent;
+  text-decoration: underline;
+}
+
+a:active {
+  color: red;
+  background-color: transparent;
+  text-decoration: underline;
+}
+</style>
+
+
+
 
 <table style="width:100%">
 	<tr><td>
 
 <h1>YOU FOUND MY WEBPAGE!<BR>
 BOOKMARK IT AND DOWNLOAD IT!<br>
-HAVE YOUR OWN YOUTUBE SERVER THAT CAN NOT BE TAKEN DOWN!
+<a href="share/index.php">HAVE YOUR OWN YOUTUBE SERVER THAT CAN NOT BE TAKEN DOWN!</a>
 </h1>
-<!-- CSS  -->
- <link href="https://vjs.zencdn.net/7.2.3/video-js.css" rel="stylesheet">
 
 
-<!-- HTML -->
-<video id='hls-example'  class="video-js vjs-default-skin" controls preload="none">
-<source type="application/x-mpegURL" src="live.m3u8">
-</video>
+<div class="container">
+      <video id="my-video" class="video-js vjs-theme-sea vjs-default-skin vjs-big-play-centered vjs-fluid" controls preload="auto" playsInline width="768" height="432" poster=""></video>
+</div>
+      <script src='js/video.min.js'></script>
 
 
-<!-- JS code -->
-<!-- If you'd like to support IE8 (for Video.js versions prior to v7) -->
-<script src="https://vjs.zencdn.net/ie8/ie8-version/videojs-ie8.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/videojs-contrib-hls/5.14.1/videojs-contrib-hls.js"></script>
-<script src="https://vjs.zencdn.net/7.2.3/video.js"></script>
 
-<script>
-var player = videojs('hls-example');
-player.play();
-</script>
 
-<h1><a href="http://thepeepshow.ddns.net:8282/pastbroadcasts/2a-caption-gallery.php">Click for: Past Broadcasts</a></h1>
+        <script  >
+
+        let hls = {
+      src:
+      "live.m3u8",
+      type: "application/x-mpegURL" };
+
+
+        let options = {
+          liveui: true,
+          //liveTracker: true,
+          userActions: {
+            hotkeys: function (event) {
+              console.log(event);
+            } } };
+
+
+
+        videojs.log.history.disable();
+        videojs.log.history.clear();
+        let readyPlayer = function () {
+          this.src(hls);
+        };
+
+        let player = videojs("my-video", options, readyPlayer);
+
+        console.log(player, player.liveTracker, player.liveTracker.startTracking());
+
+        player.on("error", e => {
+          console.log(
+          "error:",
+          player.error().MEDIA_ERR_SRC_NOT_SUPPORTED,
+          player.error().code,
+          player.error().message);
+
+        });
+
+        </script>
+
+<h1><a href="php-video-gallery/gallery/2a-caption-gallery.php">Click for: Past Broadcasts</a></h1>
 
          </td>
          <td>
@@ -151,9 +224,15 @@ player.play();
 	</td></tr>
 	<tr><td>
 
-<p>Bitcoin: <br>bc1qyddp53asfrg2adsm96fjwxc2k347czgrqqst0j</p>
-<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="thepeepshow" data-color="#FFDD00" data-emoji="" data-font="Arial" data-text="Buy me a coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
-<H1 color="#ff5500">Donate a Coffee and I will play anything @ any time!</h1>
+<p>Bitcoin:<br>
+bc1qyddp53asfrg2adsm96fjwxc2k347czgrqqst0j</p>
+<script type="text/javascript" src="https://cdnjs.buymeacoffee.com/1.0.0/button.prod.min.js" data-name="bmc-button" data-slug="thepeepshow" data-color="#00aaff" data-font="Arial" data-emoji="" data-text="Peep's Coffee" data-outline-color="#000000" data-font-color="#000000" data-coffee-color="#ffffff" ></script>
+
+    <!-- Adding link to the button on the onclick event -->
+    <button class="GFG" 
+    onclick="window.location.href = 'https://thepeepshow.locals.com';">
+        Peep's Locals
+    </button>
 
 
 <h4><u>Download a Clone of this Webpage!<br>

@@ -1,0 +1,3 @@
+#EXTM3U
+#EXT-X-STREAM-INF:BANDWIDTH=1,AVERAGE-BANDWIDTH=1
+http://thepeepshow.ddns.net:8080/app/live.m3u8?hls_ctx=z5m05343
