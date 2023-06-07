@@ -30,18 +30,19 @@ function loginForm(){
 }
 ?>
 
+
 <!DOCTYPE html>
 <html lang="en">
     <head>
         <meta charset="utf-8" />
         <title>ThePeepShow.DDNS.net</title>
         <meta name="description" content="ThePeepShow.DDNS.net" />
-
         <link rel="stylesheet" href="css/style.css" />
         <link rel="stylesheet" href="css/tick.css">
 	<link rel='stylesheet' href='css/video-js.min.css'>
 
-    <!-- Style to create button -->
+
+<!-- Style to create button -->
     <style>
         .GFG {
             background-color: #c1272d;
@@ -56,97 +57,90 @@ function loginForm(){
         }
     </style>
     </head>
+
+
     <body>
-<style>
-a:link {
-  color: blue;
-  background-color: transparent;
-  text-decoration: none;
-}
+<!-- website links colors -->
+		<style>
+		a:link {
+			color: blue;
+			background-color: transparent;
+			text-decoration: none;
+		}
 
-a:visited {
-  color: blue;
-  background-color: transparent;
-  text-decoration: none;
-}
+		a:visited {
+			color: blue;
+			background-color: transparent;
+			text-decoration: none;
+		}
 
-a:hover {
-  color: blue;
-  background-color: transparent;
-  text-decoration: underline;
-}
+		a:hover {
+			color: blue;
+			background-color: transparent;
+			text-decoration: underline;
+		}
 
-a:active {
-  color: red;
-  background-color: transparent;
-  text-decoration: underline;
-}
-</style>
-
-
+		a:active {
+			color: red;
+			background-color: transparent;
+			text-decoration: underline;
+		}
+		</style>
 
 
 <table style="width:100%">
 	<tr><td>
 
-<h1>YOU FOUND MY WEBPAGE!<BR>
-BOOKMARK IT AND DOWNLOAD IT!<br>
-<a href="http://thepeepshow.ddns.net/share/index.php">HAVE YOUR OWN YOUTUBE SERVER THAT CAN NOT BE TAKEN DOWN!</a>
-</h1>
+<!-- website title -->
+		<h1 style="font-size:3vw;text-align:center">YOU FOUND MY WEBPAGE!
+		BOOKMARK IT AND DOWNLOAD IT!
+		</h1>
 
 
-<div class="container">
-      <video id="my-video" class="video-js vjs-theme-sea vjs-default-skin vjs-big-play-centered vjs-fluid" controls preload="auto" playsInline width="768" height="432" poster=""></video>
-</div>
-      <script src='js/video.min.js'></script>
+<!-- start video code -->
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/hls.js@1"></script> -->
+<!-- Or if you want the latest version from the main branch -->
+<script src="https://cdn.jsdelivr.net/npm/hls.js@canary"></script>
+		<div class="container">
+			<video id="video" 
+			 controls preload="auto" playsInline width="768" height="432">
+			</video>
+		</div>
+<script>
+  var video = document.getElementById('video');
+  var videoSrc = 'videostream/live.m3u8';
+  if (Hls.isSupported()) {
+    var hls = new Hls();
+    hls.loadSource(videoSrc);
+    hls.attachMedia(video);
+  }
+  // HLS.js is not supported on platforms that do not have Media Source
+  // Extensions (MSE) enabled.
+  //
+  // When the browser has built-in HLS support (check using `canPlayType`),
+  // we can provide an HLS manifest (i.e. .m3u8 URL) directly to the video
+  // element through the `src` property. This is using the built-in support
+  // of the plain video element, without using HLS.js.
+  //
+  // Note: it would be more normal to wait on the 'canplay' event below however
+  // on Safari (where you are most likely to find built-in HLS support) the
+  // video.src URL must be on the user-driven white-list before a 'canplay'
+  // event will be emitted; the last video event that can be reliably
+  // listened-for when the URL is not on the white-list is 'loadedmetadata'.
+  else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = videoSrc;
+  }
+</script>
 
 
-
-
-        <script  >
-
-        let hls = {
-      src:
-      "live.m3u8",
-      type: "application/x-mpegURL" };
-
-
-        let options = {
-          liveui: true,
-          //liveTracker: true,
-          userActions: {
-            hotkeys: function (event) {
-              console.log(event);
-            } } };
-
-
-
-        videojs.log.history.disable();
-        videojs.log.history.clear();
-        let readyPlayer = function () {
-          this.src(hls);
-        };
-
-        let player = videojs("my-video", options, readyPlayer);
-
-        console.log(player, player.liveTracker, player.liveTracker.startTracking());
-
-        player.on("error", e => {
-          console.log(
-          "error:",
-          player.error().MEDIA_ERR_SRC_NOT_SUPPORTED,
-          player.error().code,
-          player.error().message);
-
-        });
-
-        </script>
-
-<h1><a href="php-video-gallery/gallery/2a-caption-gallery.php">Click for: Past Broadcasts</a></h1>
+<!-- video gallery -->
+<h1><a href="php-video-gallery/2a-caption-gallery.php">Click for: Past Broadcasts</a></h1>
 
          </td>
          <td>
 
+<!-- chatroom after login -->
     <?php
     if(!isset($_SESSION['name'])){
         loginForm();
@@ -209,18 +203,16 @@ BOOKMARK IT AND DOWNLOAD IT!<br>
          </td></tr>
         </table>
 
-<iframe src="counter/index.php>
-
 
 
    </body>
 </html>
+
+
+<!-- close out chat code -->
 <?php
 }
 ?>
-
-
-
 	</td></tr>
 	<tr><td>
 
@@ -236,14 +228,19 @@ bc1qyddp53asfrg2adsm96fjwxc2k347czgrqqst0j</p>
 
 
 <h4><u>Download a Clone of this Webpage!<br>
-and RTMP/HLS Server!<br>
-Fully Independant from Censorship!</u></h4>
+(version 2.0) HLS Server NO raspberry pi needed</u></h4>
+<a href="share/My_Youtube_Server_v2.0.zip">"My_Youtube_Server_v2.0.zip" including "read_me_first.txt" for intall instructions.</a>
+<br>
+<br>
+<br>
+<p>######Old version_1.0 not needed any more unless you want an RTMP server.########</p>
+<h4><u>(version 1.0)RTMP/HLS Server Fully Independant from Censorship!</u></h4>
+<a href="share/My_Youtube_Server_v1.0.zip">"My_Youtube_Server_v1.0.zip" including "read_me_first.txt" for intall instructions.</a>
 
-
-<a href="My_Youtube_Server.zip">"My_Youtube_Server.zip" including "read_me_first.txt" for intall instructions.</a>
 <h3><u>RTMP/HLS Server rasperry PI 3 image, split in 2 zip files(optional but simple):</u></h3>
 <a href="https://github.com/drakomofo/youtubeServer/releases/download/My_youtube_server/Rtmp_pi3_server_image.zip">"Rtmp_pi3_server_image.zip": part 1</a><br>
 <a href="https://github.com/drakomofo/youtubeServer/releases/download/My_youtube_server/Rtmp_pi3_server_image.z01">"Rtmp_pi3_server_image.z01": part 2</a>
+
 <h3><u>Mirrors:</u></h3>
 <a href="https://github.com/drakomofo/youtubeServer">https://github.com/drakomofo/youtubeServer</a><br>
 <a href="https://web.archive.org/web/20230427015638/http://thepeepshow.ddns.net/">also on wayback machine</a>
